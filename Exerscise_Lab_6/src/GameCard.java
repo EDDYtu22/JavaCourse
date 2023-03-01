@@ -8,4 +8,8 @@ public class GameCard {
         this.rank = rank;
     }
 
+    public String toString() {
+        return this.rank.getRepr() + " " + this.suit.getRepr();
+    }
+
 }

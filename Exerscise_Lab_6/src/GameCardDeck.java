@@ -25,15 +25,11 @@ public class GameCardDeck {
         return this.cards.remove(this.cards.size() - 1);
     }
 
-    public void printDeck() {
-        for (GameCard card : this.cards) {
-            System.out.println("Card: " + card.suit + "_" + card.rank.getRepr());
-        }
-    }
-
     public int getSize() {
         return this.cards.size();
     }
 
-    // TODO: toString() method
+    public String toString() {
+        return this.cards.toString().replace(',', '\n');
+    }
 }

@@ -1,6 +1,16 @@
 public enum GameCardSuit {
-    CLUBS,
-    DIAMONDS,
-    HEARTS,
-    SPADES
+    CLUBS("Clubs"),
+    DIAMONDS("Diamonds"),
+    HEARTS("Hearts"),
+    SPADES("Spades");
+
+    private String repr;
+
+    GameCardSuit(String repr) {
+        this.repr = repr;
+    }
+
+    public String getRepr() {
+        return this.repr;
+    }
 }
