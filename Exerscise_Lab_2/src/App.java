@@ -1,5 +1,3 @@
-
-import java.lang.*;
 import java.util.*;
 
 public class App {
@@ -38,8 +36,6 @@ public class App {
         Box small = new SmallBox();
         System.out.println(small instanceof SmallBox);
         System.out.println(small instanceof Box);
-        
-    
 
     }
 }

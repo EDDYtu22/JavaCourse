@@ -62,13 +62,13 @@ public class BoxContainer {
             return;
         }
         String type = box.getClass().toString();
-        
-        for(Box bo : boxes){
-            if(bo.getClass().toString().equals(type)){
+
+        for (Box bo : boxes) {
+            if (bo.getClass().toString().equals(type)) {
                 boxes.remove(bo);
                 setCurrentVolume(-bo.volume);
                 return;
-            }    
+            }
         }
         System.out.println("Box not found!");
     }

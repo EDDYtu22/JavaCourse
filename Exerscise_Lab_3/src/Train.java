@@ -1,7 +1,6 @@
-public class Train extends Tracked{
+public class Train extends Tracked {
 
-
-    public Train(){
+    public Train() {
         this.refueled = false;
         this.location = "Default";
     }
