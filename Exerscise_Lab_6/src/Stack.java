@@ -16,8 +16,7 @@ public class Stack {
             System.out.println("Stack FULL!");
             return;
         }
-        stack[currIdx] = value;
-        currIdx++;
+        stack[currIdx++] = value;
     }
 
     public void pop() {
