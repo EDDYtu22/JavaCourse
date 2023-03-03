@@ -4,6 +4,7 @@ public class DynamicArray {
     // removeElement ✅
     // size ✅
     // slice ✅
+    // trimToSize()
 
     private int[] innerArr;
     private int currIdx;
@@ -16,7 +17,7 @@ public class DynamicArray {
     }
 
     public void printDynArr() {
-        for (int i = 0; i < cappacity; i++) {
+        for (int i = 0; i < this.cappacity; i++) {
             System.out.println(this.innerArr[i]);
         }
     }
@@ -54,13 +55,17 @@ public class DynamicArray {
         }
     }
 
-    public void removeElement(int index) {
+    public Integer removeElement(int index) {
+        Integer result = innerArr[index];
         if (index < 0 || index >= this.cappacity) {
             System.out.println("Error!");
-            return;
-        } else {
-            this.innerArr[index] = 0;
+            return null;
         }
+        for (int i = index; i < this.cappacity - 1; i++) {
+            this.innerArr[i] = this.innerArr[i + 1];
+        }
+        currIdx -= 1;
+        return result;
     }
 
     public int size() {
@@ -73,6 +78,15 @@ public class DynamicArray {
             temp[j] = innerArr[i];
         }
         return temp;
+    }
+
+    public void trimToSize(){
+        int[] temp = new int[currIdx];
+        for(int i = 0; i < temp.length; i++){
+            temp[i] = this.innerArr[i];
+        }
+        this.innerArr = temp;
+        this.cappacity = innerArr.length;
     }
 
 }
