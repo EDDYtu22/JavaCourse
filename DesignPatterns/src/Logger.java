@@ -2,6 +2,10 @@ package DesignPatterns.src;
 
 public class Logger {
 
+    // class Logger is build based on the Singleton designt pattern
+    // because I need only one instance of the class for logging
+    // messages in the console
+
     public static Logger instance = null;
 
     private Logger() {
