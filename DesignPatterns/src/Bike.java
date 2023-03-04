@@ -1,8 +1,10 @@
 package DesignPatterns.src;
 
-
 public class Bike {
 
+    // class Bike and the nested class BikeBuilder represent the builder design pattern
+    
+    
     private String brand;
     private String model;
     private Float wheelSize;
