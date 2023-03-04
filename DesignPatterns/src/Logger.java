@@ -15,31 +15,40 @@ public class Logger {
 
     }
 
-    public <T> void emergencyLog(T t){
-        System.out.println(SeverityLevel.EMERGENCY.toString() + ": " + t);
+    // All methods print first the severity level (we get it from SeverityLevel.java)
+    // and then the message that we want to print
+
+    public void emergencyLog(String message) {
+        System.out.println(SeverityLevel.EMERGENCY.toString() + ": " + message);
         System.exit(0);
     }
-    public <T> void alertLog(T t){
-        System.out.println(SeverityLevel.ALERT.toString() + ": " + t);
+
+    public void alertLog(String message) {
+        System.out.println(SeverityLevel.ALERT.toString() + ": " + message);
     }
-    public <T> void criticalLog(T t){
-        System.out.println(SeverityLevel.CRITICAL.toString() + ": " + t);
-    } 
-    public <T> void errorLog(T t){
-        System.out.println(SeverityLevel.ERROR.toString() + ": " + t);
+
+    public void criticalLog(String message) {
+        System.out.println(SeverityLevel.CRITICAL.toString() + ": " + message);
     }
-    public <T> void warningLog(T t){
-        System.out.println(SeverityLevel.WARNING.toString() + ": " + t);
+
+    public void errorLog(String message) {
+        System.out.println(SeverityLevel.ERROR.toString() + ": " + message);
     }
-    public <T> void noticeLog(T t){
-        System.out.println(SeverityLevel.NOTICE.toString() + ": " + t);
-    } 
-    public <T> void infoLog(T t){
-        System.out.println(SeverityLevel.INFORMATIONAL.toString() + ": " + t);
+
+    public void warningLog(String message) {
+        System.out.println(SeverityLevel.WARNING.toString() + ": " + message);
     }
-    public <T> void debugLog(T t){
-        System.out.println(SeverityLevel.DEBUG.toString() + ": " + t);
+
+    public void noticeLog(String message) {
+        System.out.println(SeverityLevel.NOTICE.toString() + ": " + message);
     }
-    
-    
+
+    public void infoLog(String message) {
+        System.out.println(SeverityLevel.INFORMATIONAL.toString() + ": " + message);
+    }
+
+    public void debugLog(String message) {
+        System.out.println(SeverityLevel.DEBUG.toString() + ": " + message);
+    }
+
 }
