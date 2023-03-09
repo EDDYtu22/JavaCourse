@@ -1,5 +1,6 @@
 package DesignPatterns.src;
 
+import java.net.StandardSocketOptions;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,11 +44,31 @@ public class App {
 
         // System.err.println("eho");
 
-        console.emergencyLog("Emergency exit");
+        // console.emergencyLog("Emergency exit");
         
-        Weekday day = Weekday.FRIDAY;
-        System.out.println(day.isWeekDay());
-        System.out.println(day.isHoliday());
+        // Weekday day = Weekday.FRIDAY;
+        // System.out.println(day.isWeekDay());
+        // System.out.println(day.isHoliday());
+
+        Pizza starter = new PlainPizza();
+        System.out.println(starter.getClass());
+
+        // add mozarella
+        starter = new Mozarella(starter);
+        starter = new Mozarella(starter);
+        starter = new Mozarella(starter);
+        System.out.println(starter.getClass());
+        
+        // add Peperonni
+        starter = new Peperonni(starter);
+        System.out.println(starter.getClass());
+
+        System.out.println(starter.getDescription());
+        System.out.println(starter.getCost());
+
+        // разгледай адресите 
+
+
 
         
 

@@ -4,7 +4,7 @@ public class DynamicArray {
     // removeElement ✅
     // size ✅
     // slice ✅
-    // trimToSize()
+    // trimToSize() ✅
 
     private int[] innerArr;
     private int currIdx;
