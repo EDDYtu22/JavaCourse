@@ -1,16 +1,10 @@
 package DesignPatterns.src;
 
-import java.net.StandardSocketOptions;
-import java.util.ArrayList;
-import java.util.List;
-
-import DesignPatterns.src.Bike.BikeBuilder;
-
 public class App {
 
     public static void main(String[] args) {
 
-        Logger console = Logger.getInstance();
+        //Logger console = Logger.getInstance();
 
         // List<Animal> zoo = new ArrayList<>(45);
         // //console.log(zoo.size());

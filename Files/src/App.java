@@ -1,11 +1,9 @@
 import java.io.File;
-import java.sql.Array;
-import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
 
-        File fileToSplit = new File("/Users/edko/Main/JavaCourse/Files/src/IMG_2171.jpeg");
+        //File fileToSplit = new File("/Users/edko/Main/JavaCourse/Files/src/IMG_2171.jpeg");
 
         File[] dir = {
                 new File("/Users/edko/Main/JavaCourse/Files/src/IMG_2171.jpeg_031"),
