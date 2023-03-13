@@ -7,10 +7,10 @@ import java.io.IOException;
 
 public class FileAppender {
 
-    public static void appendFiles(File[] f ) throws IOException {
-        String parent =
+    public static void appendFiles(File[] f , String format) throws IOException {
+        
 
-        try(FileOutputStream oStream = new FileOutputStream("appended_" + f[0] )){
+        try(FileOutputStream oStream = new FileOutputStream("Appended." + format)){
             
             for(int i = 0; i < f.length; i++){
                 FileInputStream iStream = new FileInputStream(f[i]);

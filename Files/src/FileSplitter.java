@@ -1,3 +1,4 @@
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -30,6 +31,33 @@ public class FileSplitter {
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+    }
+
+    public static void splitFileInByteChunks(File file, Integer chunkSize) throws Exception {
+        int currentChunkNo = 1;
+
+        try (FileInputStream fis = new FileInputStream(file);
+                BufferedInputStream bis = new BufferedInputStream(fis)) {
+
+                    byte[] buffer = new byte[chunkSize];
+
+                    int bytesReadForChunk;
+
+                    while((bytesReadForChunk = bis.read(buffer, 0, chunkSize))> 0){
+                        String chunkFileFilename = String.format("%s_03%d", file.getAbsolutePath(), currentChunkNo++);
+
+                        try (FileOutputStream fos = new FileOutputStream(chunkFileFilename)) {
+                            fos.write(buffer);
+                        } catch (Exception e) {
+                            
+                        }
+
+                    }
+
+
+        } catch (Exception e) {
+            System.out.println("ba maamu");
         }
     }
 
