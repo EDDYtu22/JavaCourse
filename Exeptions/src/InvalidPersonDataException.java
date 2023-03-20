@@ -14,7 +14,7 @@ public class InvalidPersonDataException extends RuntimeException{
     }
 
     public String getAdditionalData() {
-        return super.getMessage() + additionalData;
+        return super.getMessage() + ": " + additionalData;
     }
 
     public String getId() {
